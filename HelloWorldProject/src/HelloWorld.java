@@ -18,7 +18,7 @@ public class HelloWorld {
 				System.out.println("Which type of conversion would you like to perform?");
 				answer = input.nextInt();
 				input.nextLine();
-			}
+			}//end while
 
 			if (answer == 1){
 				System.out.println("What is the binary number?");
@@ -30,12 +30,12 @@ public class HelloWorld {
 				while (binary > 0){
 					if (binary % 10 == 1){
 						decimal += Math.pow(2, power);
-					}
+					}//end if
 					binary /= 10;
 					power++;
-				}
+				}//end while
 				System.out.println("The decimal equivalent is: " + decimal);
-			}
+			}//end if
 			else{
 				System.out.println("What is the decimal number?");
 				int decimal = input.nextInt();
@@ -45,27 +45,22 @@ public class HelloWorld {
 				while (decimal > 0){
 					binary = (decimal % 2) + binary;
 					decimal /= 2;
-				}
+				}//end while
 				System.out.println("The binary equivalent is: " + binary);
-			}
+			}//end else
 
 			System.out.println("Do you want to continue - yes or no?");
 			
 			String ans = input.nextLine().trim().toLowerCase();
-			// while (response != "yes" && response != "no"){
-			// 	System.out.println("Do you want to continue - yes or no?");
-			// 	response = input.nextLine();
-			// }
 
 			if (ans.equals("yes")){
 				run = true;
 				System.out.println("\n\n");
-			}
+			}//end if
 			else{
 				run = false;
-			}
-		}
+			}//end else
+		}//end while
 		input.close();
-	}
-
-}
+	}//end main
+}//end class
